@@ -127,6 +127,15 @@ This reduces operational complexity and improves reliability.
 
 ---
 
-## 10. References & Notes
+## 10. Author
+
+**Malaya Padhi** *(pronounced: Malay)*
+Principal Architect (Aspirational) | Snowflake • Data Architecture • Data Engineering
+
+This project reflects hands-on architectural thinking around Snowflake Dynamic Tables, Medallion Architecture, and production-oriented data pipeline design, with a clear progression toward Principal Architect–level responsibilities.
+
+---
+
+## 11. References & Notes
 
 This project is conceptually aligned with common industry discussions on Medallion Architecture and demonstrates a **Snowflake-specific implementation using Dynamic Tables**.
