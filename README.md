@@ -4,27 +4,30 @@
 
 This project demonstrates a **Snowflake-native implementation of the Bronze–Silver–Gold (BSG) architecture using Dynamic Tables**.
 
-Instead of relying on traditional task- and stream-based orchestration, this design uses **Dynamic Table dependencies and refresh logic** to build a clean, maintainable, and cost-aware data pipeline.
-
-The goal of this project is not to showcase features, but to demonstrate **architectural discipline**: clear layer responsibilities, predictable refresh behavior, and business-ready analytics.
+The focus of this repository is **architecture and platform design**, not operational pipeline implementation. It is intentionally structured to explain **how and why** Dynamic Tables should be used to design clean, maintainable BSG layers in Snowflake.
 
 ---
 
-## 2. Why Bronze–Silver–Gold with Dynamic Tables
+## 2. Project Intent & Context
 
-The Bronze–Silver–Gold pattern remains a proven way to organize analytical data pipelines. However, many implementations fail due to:
+This repository is **deliberately different** from my earlier Dynamic Tables project.
 
-* Poorly defined layer responsibilities
-* Excessive transformations too early in the pipeline
-* Fragile orchestration logic that is hard to debug and expensive to operate
+* **Earlier project**: Focused on building a **production-ready data engineering pipeline**, including end-to-end execution and operational aspects such as notifications and monitoring.
 
-Snowflake **Dynamic Tables change how BSG pipelines are executed**:
+* **This project**: Focuses on **platform and architectural design** — how to correctly structure Bronze–Silver–Gold layers using Snowflake Dynamic Tables, define responsibility boundaries, and rely on Snowflake’s execution model rather than custom or user-managed orchestration.
 
-* Data freshness is declared, not orchestrated
-* Dependencies are explicit and system-managed
-* Reprocessing becomes simpler and more predictable
+The intent here is to demonstrate **design judgment**, specifically:
 
-This project applies BSG **with intent**, not as a mechanical pattern.
+* When *not* to add operational complexity
+* How to keep responsibilities clean across Bronze, Silver, and Gold layers
+* How Dynamic Tables change the way BSG pipelines are reasoned about
+
+The SQL included in this repository is **intentionally minimal and illustrative**. It exists to clarify layer intent, not to represent a full production pipeline.
+
+Together, these two projects represent **complementary perspectives**:
+
+* Building and operating data pipelines
+* Designing data platforms with long-term correctness and maintainability in mind
 
 ---
 
