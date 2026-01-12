@@ -33,6 +33,8 @@ Together, these two projects represent **complementary perspectives**:
 
 ## 3. Architecture Overview
 
+![Snowflake BSG Architecture using Dynamic Tables](architecture/bsg-dynamic-tables-architecture.png)
+
 The pipeline follows a linear, dependency-driven flow:
 
 **Source → Bronze Dynamic Table → Silver Dynamic Table → Gold Dynamic Table**
