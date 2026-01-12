@@ -46,6 +46,10 @@ Key architectural characteristics:
 
 This architecture emphasizes **clarity, traceability, and operational simplicity** over complexity.
 
+Dynamic Tables are used to allow Snowflake to manage refresh order and incremental processing.
+The platform automatically maintains dependencies across Bronze, Silver, and Gold layers without user-managed orchestration.
+
+
 ---
 
 ## 4. Bronze Layer — Raw but Governed
