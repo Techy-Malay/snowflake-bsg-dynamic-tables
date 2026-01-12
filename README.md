@@ -54,15 +54,19 @@ The platform automatically maintains dependencies across Bronze, Silver, and Gol
 
 ## 4. Implementation Outline
 [File structure list]
+
 ## Implementation Outline
 
 The SQL implementation for this project is organized as follows:
 
+```text
 sql/
 ├── 00_orders_staging.sql        # Stage sample data with Time Travel enabled
 ├── 01_bronze_dynamic_table.sql  # Bronze layer: raw but governed
 ├── 02_silver_dynamic_table.sql  # Silver layer: cleansed and deduplicated
 └── 03_gold_dynamic_table.sql    # Gold layer: business-ready aggregates
+
+
 
 ---
 
