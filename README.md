@@ -66,6 +66,7 @@ sql/
 ├── 02_silver_dynamic_table.sql  # Silver layer: cleansed and deduplicated
 └── 03_gold_dynamic_table.sql    # Gold layer: business-ready aggregates
 
+```
 
 
 ---
