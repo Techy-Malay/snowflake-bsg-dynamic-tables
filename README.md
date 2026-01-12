@@ -52,7 +52,22 @@ The platform automatically maintains dependencies across Bronze, Silver, and Gol
 
 ---
 
-## 4. Bronze Layer — Raw but Governed
+## 4. Implementation Outline
+[File structure list]
+## Implementation Outline
+
+The SQL implementation for this project is organized as follows:
+
+sql/
+├── 00_orders_staging.sql        # Stage sample data with Time Travel enabled
+├── 01_bronze_dynamic_table.sql  # Bronze layer: raw but governed
+├── 02_silver_dynamic_table.sql  # Silver layer: cleansed and deduplicated
+└── 03_gold_dynamic_table.sql    # Gold layer: business-ready aggregates
+
+---
+
+
+## 5. Bronze Layer — Raw but Governed
 
 The Bronze layer represents raw data ingestion with governance.
 
@@ -67,7 +82,7 @@ Bronze is designed to be **reproducible and traceable**, not a dumping ground.
 
 ---
 
-## 5. Silver Layer — Cleaned and Standardized
+## 6. Silver Layer — Cleaned and Standardized
 
 The Silver layer focuses on data correctness and consistency.
 
@@ -87,7 +102,7 @@ This separation keeps reprocessing fast and debugging manageable.
 
 ---
 
-## 6. Gold Layer — Business-Ready Analytics
+## 7. Gold Layer — Business-Ready Analytics
 
 The Gold layer serves analytical and reporting workloads.
 
@@ -101,7 +116,7 @@ Gold tables are designed so that **consumers do not need to bypass them**.
 
 ---
 
-## 7. Refresh Strategy & Execution Model
+## 8. Refresh Strategy & Execution Model
 
 Dynamic Tables refresh based on declared freshness and upstream dependencies.
 
@@ -115,7 +130,7 @@ This reduces operational complexity and improves reliability.
 
 ---
 
-## 8. Key Design Decisions
+## 9. Key Design Decisions
 
 * Dynamic Tables were chosen over Tasks and Streams for simplicity and maintainability
 * Transformations are minimized in early layers to keep reprocessing cheap
@@ -124,7 +139,7 @@ This reduces operational complexity and improves reliability.
 
 ---
 
-## 9. What This Project Demonstrates
+## 10. What This Project Demonstrates
 
 * Snowflake Dynamic Tables
 * Medallion (BSG) architecture principles
@@ -134,7 +149,7 @@ This reduces operational complexity and improves reliability.
 
 ---
 
-## 10. Author
+## 11. Author
 
 **Malaya Padhi** *(pronounced: Malay)*
 Principal Architect (Aspirational) | Snowflake • Data Architecture • Data Engineering
@@ -143,6 +158,6 @@ This project reflects hands-on architectural thinking around Snowflake Dynamic T
 
 ---
 
-## 11. References & Notes
+## 12. References & Notes
 
 This project is conceptually aligned with common industry discussions on Medallion Architecture and demonstrates a **Snowflake-specific implementation using Dynamic Tables**.
